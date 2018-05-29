@@ -1,0 +1,8 @@
+<h1>{{ titulo }}</h1>
+<div *ngIf="marcadores">
+    <agm-map [latitude]="lat" [longitude]="long">
+        <agm-marker *ngFor="let marcador of marcadores" [latitude]="marcador.lat" [longitude]="marcador.long">
+            <agm-info-window>{{nombre}}{{marcador.nombre}} <br/> {{ph}} {{marcador.ph_agua}} </agm-info-window>
+        </agm-marker>
+    </agm-map>
+</div>
