@@ -1,0 +1,53 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "main": "src/index.js",
+  "author": "Marcos",
+  "license": "UNLICENSED",
+  "private": true,
+  "scripts": {
+    "lint": "eslint .",
+    "start": "nodemon src/index.js --exec babel-node",
+    "build": "babel src -d dist --ignore **/*.test.js",
+    "build-docker": "docker build -t aidos-backend .",
+    "serve": "node dist/index.js",
+    "test": "mocha test/**/*.test.js --require babel-register",
+    "unit-test": "mocha src/**/*.test.js --require babel-register"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "compression": "^1.7.1",
+    "cors": "^2.8.4",
+    "express": "^4.16.2",
+    "express-validation": "^1.0.2",
+    "helmet": "^3.10.0",
+    "http-status": "^1.0.1",
+    "joi": "^13.1.2",
+    "json-api": "^3.0.0-beta.26",
+    "method-override": "^2.3.10",
+    "mongoose": "^5.1.5",
+    "morgan": "^1.9.0",
+    "multer": "^1.3.0",
+    "nconf": "^0.10.0",
+    "uuid": "^3.2.1"
+  },
+  "devDependencies": {
+    "apidoc": "^0.17.6",
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-register": "^6.26.0",
+    "chai": "^4.1.2",
+    "chai-as-promised": "^7.1.1",
+    "coveralls": "^3.0.0",
+    "eslint": "^4.16.0",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.8.0",
+    "mocha": "^5.0.0",
+    "nodemon": "^1.14.11",
+    "nyc": "^11.4.1",
+    "sinon": "^4.2.2",
+    "sinon-chai": "^2.14.0",
+    "supertest": "^3.0.0",
+    "supertest-as-promised": "^4.0.2"
+  }
+}

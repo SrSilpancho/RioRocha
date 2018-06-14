@@ -1,0 +1,8 @@
+    FROM node:10.1.0
+
+    MAINTAINER ariel.choquetopa@fundacion-jala.org
+
+    WORKDIR /dist
+  
+    COPY . $WORKDIR
+    ENTRYPOINT ["npm", "start"]
